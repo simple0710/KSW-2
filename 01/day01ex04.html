@@ -1,0 +1,38 @@
+<!-- 2023/01/25 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>오징어</li>
+    <li>꼴뚜기</li>
+    <li>대구</li>
+    <li>명태</li>
+    <li>거북이</li>
+  </ul>
+  <script>
+    let colors = ['red', 'green', 'blue', 'orange', 'pink'];
+    let lis = document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+    console.dir(lis);
+    // 실행이 안된 경우 : i 출력시 5만 나오는 경우에는 이미 반복된 후에 이벤트가 발생하는 것이다.
+    // -> 자바스크립트 객체는 캡슐화가 안됨.
+    // 필요한 속성을 객체에 임의로 추가 가능.
+    for (let i = 0; i < lis.length; i++) {
+      lis[i].i = i; // lis[i].no = i;
+      lis[i].onclick = function(event) {
+        // console.log(colors[i]);
+        // console.log(this.i);
+        // 출력 방법(해당 위치의 li의 배경색을 변경한다.)
+        // this.style.backgroundColor = colors[i];
+        // event.target.style.backgroundColor = colors[i];
+        this.style.backgroundColor = colors[this.i];
+      }
+    }
+  </script>
+</body>
+</html>
