@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      border: 2px solid red;
+      /* left는 요소가 레이어여야 적용된다. position */
+      position: absolute;
+      left: 0px;
+      top: 30px;
+      transition: all 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">Box</div>
+  <button id="playBtn1">0, 0</button>
+  <button id="playBtn2">0, 200</button>
+  <button id="playBtn3">200, 200</button>
+  <button id="playBtn4">200, 0</button>
+  <script>
+    // 과제 : 해당 버튼의 위치로 이동하기
+    var colors = ['blue', 'orange', 'brown', 'pink'];
+    var playBtn1 = document.getElementById("playBtn1");
+    var playBtn2 = document.getElementById("playBtn2");
+    var playBtn3 = document.getElementById("playBtn3");
+    var playBtn4 = document.getElementById("playBtn4");
+    var box = document.getElementById("box");
+    playBtn1.onclick = function(event) {
+      box.style.left = "0px";
+      box.style.top = "30px";
+      box.style.backgroundColor = colors[0];
+    }
+    playBtn2.onclick = function(event) {
+      box.style.left = "200px";
+      box.style.top = "30px";
+      box.style.backgroundColor = colors[1];
+    }
+    playBtn3.onclick = function(event) {
+      box.style.left = "200px";
+      box.style.top = "200px";
+      box.style.backgroundColor = colors[2];
+    }
+    playBtn4.onclick = function(event) {
+      box.style.left = "0px";
+      box.style.top = "200px";
+      box.style.backgroundColor = colors[3];
+    }
+  </script>
+</body>
+</html>
