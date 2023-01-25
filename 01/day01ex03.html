@@ -1,0 +1,45 @@
+<!-- 2023/01/25 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- ul>li*3 : ul + li * 3개가 나온다. -->
+  <ul type = "circle" class="menu">
+    <li>Red</li>
+    <li>green</li>
+    <li>Yellow</li>
+  </ul>
+  <ol type = "a" class="olMenu">
+    <li>White</li>
+    <li>Pink</li>
+    <li>Purple</li>
+  </ol>
+  <script>
+    let ulTag = document.getElementsByClassName("menu");
+    let ulliList = ulTag[0].getElementsByTagName("li");
+    for (let i = 0; i < ulliList.length; i++) {
+      ulliList[i].onclick = function(event) {
+        console.log(event.target.innerText);
+        document.body.style.background = event.target.innerText;
+        // console.log(this);
+        // document.body.style.background = this.innerText;
+      }
+    }
+    let olTag = document.getElementsByClassName("olMenu")[0].getElementsByTagName("li");
+    for (let olliList of olTag) {
+      olliList.onclick = function(event) {
+        // let colorName = this.innerText;
+        // document.body.style.background = colorName;
+        document.body.style.background = this.innerText;
+        // !==, !=, ===, ==
+        console.log(this === event.target); // '=='은 모양만 같아도 되지만, '==='은 타입까지 같아야 한다.
+      }
+    }
+  </script>
+</body>
+</html>
