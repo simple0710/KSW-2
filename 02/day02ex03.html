@@ -1,0 +1,70 @@
+<!-- 2023/01/26 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #nav > ul {
+        border: 0px solid red;
+        list-style: none;
+        padding: 0;
+        /* height: 50px; */
+        overflow: hidden;
+        width: 1000px;
+        margin: 10px;
+      }
+      #nav li {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        list-style: none;
+        text-align: center;
+        width: 200px;
+        height: 50px;
+        /* 상위 버전 가로 정렬 */
+        /* display: inline-block; */
+        /* 하위 버전 가로 정렬 */
+        display: block;
+        float: left;
+        box-sizing: border-box; /* 안쪽으로 border 증가 */
+        line-height: 50px; /* 글 행의 높이 */
+      }
+      #nav li:hover {
+        /* 마우스를 올릴 경우 반응 */
+        background-color: pink;
+        border-bottom: 2px solid rgb(88, 41, 49);
+      }
+      h1 {
+        text-align: center;
+        width: 1000px;
+      }
+      div#page {
+        width: 1000px;
+        margin: 0 auto; /* 좌, 우가 모두 auto면 가운데 정렬 한다. */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page">
+      <div id="head">
+        <h1>길동이의 홈페이지</h1>
+        <div id="nav">
+          <ul>
+            <li>HOME</li>
+            <li>PROGILE</li>
+            <li>GALLERY</li>
+            <li>LECTURE</li>
+            <li>BOARD</li>
+          </ul>
+        </div>
+      </div>
+      <div id="content">
+        <h2>오신 것을 환영합니다.</h2>
+      </div>
+    </div>
+  </body>
+</html>
