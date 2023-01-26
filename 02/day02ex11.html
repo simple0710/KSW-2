@@ -1,0 +1,74 @@
+<!-- 과제 계산기 만들어 보기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #calc {
+        width: 210px;
+      }
+      #calc button {
+        width: 50px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>계산기</h1>
+    <input type="text" id="oper" value="+" /> <!-- 연산 방법 입력 -->
+    <input type="button" id="resBtn" value ="확인" />
+    <br />
+    <div id="calc"></div>
+    <div id="res">결과 : </div>
+    <script>
+      var calc = document.getElementById("calc");
+      var newResBtn = document.querySelector("#resBtn");
+      var oper = document.querySelector("#oper")
+      var ans = 0
+      var ind = 0
+      // 확인 버튼을 누른 경우 oper의 내용에 따라 ind 값을 저장한다.
+      newResBtn.onclick = function(event) {
+        console.log(oper.value);
+        if (oper.value == "+") {
+          ind = 0
+        } else if (oper.value == "-") {
+          ind = 1
+        } else if (oper.value == "*") {
+          ind = 2
+        } else if (oper.value == "/") {
+          ind = 3
+        } else {
+          ind = ind
+        }
+      }
+      for (var i = 0; i < 16; i++) {
+        // 버튼 생성 및 내부 값(Text) 지정
+        var newBtn = document.createElement("button");
+        newBtn.innerText = i;
+        calc.appendChild(newBtn);
+        // console.log(newBtn);
+        // 숫자 버튼을 누른 경우
+        newBtn.onclick = function(event) {
+          console.log(this);
+          // ind 값을 확인한 후 계산한 값을 ans에 저장
+          if (ind == 0) {
+            ans += parseInt(this.innerText);
+          } else if (ind == 1) {
+            ans -= parseInt(this.innerText);
+          } else if (ind == 2) {
+            ans *= parseInt(this.innerText);
+          } else if (ind == 3) {
+            ans /= parseInt(this.innerText);
+          }
+          // 화면에 출력
+          var newRes = document.getElementById("res");
+          newRes.innerHTML = "결과 : " + ans
+          console.log(newRes);
+        } 
+      }
+    </script>
+  </body>
+</html>
