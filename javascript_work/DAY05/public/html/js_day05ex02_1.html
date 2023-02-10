@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      <h1>js_day05ex02_1</h1>
+      <h2>Ajax 실습</h2>
+      <div id="demo">
+        <h2>Let AJAX change this text</h2>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+      </div>
+    </h1>
+    <script>
+      function loadDoc() {
+        alert("loadDoc 호출!");
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+          document.getElementById("demo").innerHTML = this.responseText;
+        };
+        // 라이브 서버 접근 또는 localhost:3000으로 접속 하는 방법
+        xhttp.open("GET", "/js/ajax_info.txt", true);
+        // xhttp.open("GET", "http://localhost:3000/js/ajax_info.txt", true);
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>

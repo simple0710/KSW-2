@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+  </head>
+  <body>
+    <h2>JSON 실습</h2>
+    <script>
+      const myObj = { name: "John", age: 31, city: "New York" }; // 계층적
+      const jsonStr = JSON.stringify(myObj); // 문자열 방식으로 변환
+      console.log(jsonStr);
+      const jsonObj = JSON.parse(jsonStr);
+      console.log(jsonObj);
+
+      const myJSON = '{ "name": "John", "age": 31, "city": "New York"}';
+      const myJsonObj = JSON.parse(myJSON);
+      console.log(myJsonObj);
+    </script>
+  </body>
+</html>
