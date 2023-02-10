@@ -1,31 +1,31 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import Test from "./Test";
+import React, { useState, useEffect } from "react";
+// CSS는 App.css 파일을 만들어 스타일 적용 후 App.js에서 import하면 된다.
 
-function App() {
-  const [saramList, setSaramList] = useState([]);
-  useEffect(() => {
-    // axios 모듈을 활용한 Ajax 처리
-    axios.get("http://localhost:5000/car").then((response) => {
-      setSaramList(response.data);
-    });
-  }, []);
-
+function Menu(props) {
+  const [menuItems, setMenuItems] = useState([
+    "HOME",
+    "PROFILE",
+    "GALLERY",
+    "LECTURE",
+    "GUEST",
+  ]);
   return (
-    <div>
-      <h1>길동이의 홈페이지</h1>
-      <Test />
-      <ul>
-        {saramList.map((saram) => {
-          return (
-            <li key={saram.no}>
-              {saram.name}, {saram.company}, {saram.year}
-            </li>
-          );
+    <>
+      <ul className="menu">
+        {menuItems.map((item, i) => {
+          return <li key="i">item</li>;
         })}
       </ul>
-    </div>
+    </>
   );
 }
 
+function App() {
+  return (
+    <>
+      <h1>Comstudy SW Schools</h1>
+      <Menu></Menu>
+    </>
+  );
+}
 export default App;
