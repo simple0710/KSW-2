@@ -1,0 +1,8 @@
+input[disabled] {
+  border: 1px;
+  background-color: white;
+}
+
+input[type="text"] {
+  text-decoration: line-through;
+}
