@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      div.container div {
+        padding: 3px;
+        margin: 3px;
+        border: 1px solid green;
+        border-radius: 7px;
+        overflow: hidden;
+        width: auto;
+      }
+      .header nav li {
+        float: left;
+        width: 160px;
+        height: 80px;
+        border: 1px solid gray;
+        list-style: none;
+      }
+      div.middle div {
+        height: auto;
+        width: auto;
+        float: left;
+      }
+      div.middle div.center {
+        width: 550px;
+      }
+      div.footer {
+        clear: both;
+        height: 80px;
+      }
+      div.center > div {
+        height: 80px;
+        width: 260px;
+      }
+      div.center div:nth-child(1) {
+        width: 530px;
+      }
+      div.middle div.left > div {
+        width: 100px;
+      }
+      div.middle div.right {
+        width: auto;
+        padding: 1%;
+        height: 200px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 맨 위 -->
+      <div class="header">
+        <h1>Welcome to My Homepage</h1>
+        <h2>Use the menu to select diffrent Stylesheets</h2>
+      </div>
+      <!-- 중간 -->
+      <div class="middle">
+        <div class="left">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+        <div class="center">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="right">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <!-- 하단 -->
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>

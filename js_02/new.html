@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jsDay02Homework.html</title>
+    <style>
+      div.gameBoxs {
+        border: 1px solid orange;
+        width: 300px;
+        height: 100px;
+        overflow: hidden;
+      }
+      div.gameBoxs ul {
+        margin: 0;
+        padding: 0px;
+        float: left;
+      }
+      div.gameBoxs li {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        list-style: none;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>햄버거 하우스 게임</h1>
+    <stop><button id="playBtn">Play</button></stop>
+    <div class="gameBoxs"></div>
+    <div class="gameBoxs"></div>
+    <div class="gameBoxs"></div>
+    <button id="stopBtn">정지</button>
+
+    <script>
+      function MakeUl(gameBoxs) {
+        // 그림 생성 함수
+        this.SIZE = 5;
+        this.init = function () {
+          this.ulTag = document.createElement("ul");
+          var p = 0;
+          for (var i = 0; i < 2; i++){
+            for (var j = 1; j <= this.SIZE; j++) {
+              var li = document.createElement("li");
+              // 이미지의 랜덤 인덱스를 통해 값을 정함.
+              li.style.backgroundColor = images[j % 5];
+              li.innerText = j;
+              this.ulTag.appendChild(li);
+            }
+          }
+          gameBoxs.appendChild(this.ulTag);
+
+          // 게임 실행
+          // this.play(place);
+          return this;
+        };
+
+        this.play = function (p, index) {
+          this.ulTag.style.position = "relative";
+          var y = 0;
+          // 멈추는 위치
+          var refInterval = setInterval(() => {
+            y += 10;
+            if (stopFlag == p) {
+              // 멈추는 조건
+              if (y % 100 == 0) {
+                console.log(p-1);
+                console.log(index);
+                newScoreData[index][p-1] = (y/100) % this.SIZE + 1;
+                cnt++;
+                if (cnt == 9) {
+                  console.log(newScoreData);
+                  playing = false;
+                  if (scoreData[0] == scoreData[1] == scoreData[2]) {
+                    console.log("same");
+                  } else {
+                    console.log("sad...");
+                  }
+                }
+                clearTimeout(refInterval);
+              }
+            }
+            this.ulTag.style.top = -(y % (this.SIZE * 100)) + "px";
+          }, 10 + Math.floor(Math.random() * 11));
+        };
+      }
+      // 외부
+      var stopFlag = 0;
+      var stopBtn = document.getElementById("stopBtn");
+      stopBtn.addEventListener("click", (event) => {
+        stopFlag += 1;
+      })
+      var images = ["orange", "blue", "pink", "yellowgreen", "green"];
+      var gameBoxs = document.querySelectorAll(".gameBoxs");
+      var scoreData = new Array(3);
+      for (var i = 0; i < scoreData.length; i++) {
+        scoreData[i] = new Array(3)
+      }
+      var cnt = 0
+      // 박스별 실행
+      gameBoxs.forEach((gameBox, index) => {
+        var ul01 = new MakeUl(gameBox).init();
+        var ul02 = new MakeUl(gameBox).init();
+        var ul03 = new MakeUl(gameBox).init();
+
+      var playBtn = document.getElementById("playBtn");
+      var playing = false
+      playBtn.addEventListener("click", (event) => {
+        if (!playing){
+          stopFlag = 0;
+          cnt = 0;
+          newScoreData = scoreData;
+          ul01.play(1, index);
+          ul02.play(2, index);
+          ul03.play(3, index);
+        }
+        playing = true;
+      });
+    });
+
+    </script>
+  </body>
+</html>

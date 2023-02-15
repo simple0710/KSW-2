@@ -1,0 +1,89 @@
+<!-- 2023/01/28 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo-list</title>
+    <style>
+      li span {
+        display: inline-block;
+        width: 200px;
+        height: 40px;
+      }
+      li span.del {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 주말 과제 : HTML, CSS, JS를 이용해서 todo-List 구현 -->
+    <div class="container">
+      <h1>할 일 목록</h1>
+      <p>
+        할 일 <input type="text" id="newWork" value="청소하기" />
+        <button id="addBtn" onclick="addList();">추가</button>
+      </p>
+      <!-- ul도 되고 table로도 가능 -->
+      <ul id="listArea"></ul>
+    </div>
+
+    <script>
+      var todolist = [
+        { no: 1, todo: "친구 만나서 스터디 하기", done: true },
+        { no: 2, todo: "주말 과제 하기", done: false },
+        { no: 3, todo: "배운 내용 복습하기", done: false },
+        { no: 4, todo: "자바 공부하기", done: false },
+      ];
+      // 화면 새로 그리기
+      function drawList() {
+        var newLis = "";
+        for (var i = 0; i < todolist.length; i++) {
+          var todo = todolist[i];
+          // 버튼을 누를 경우 실행할 함수를 미리 지정해 둔다.
+          var liTmpStr = `<li>
+            <input type="checkbox" ${todo.done ? "checked" : ""} onchange="drawLine(${i})"/>
+            <span class="${todo.done ? "del" : ""}">${todo.todo}</span>
+            <button onclick="delList(${i});">삭제</button>
+          </li>`;
+          newLis += liTmpStr;
+        }
+        document.querySelector("#listArea").innerHTML = newLis;
+      }      
+      // 추가 버튼 구현
+      function addList() {
+        var newFocusBtn = document.getElementById("addBtn");
+        var newWorkInput = document.querySelector("#newWork");
+        var newWorkValue = newWorkInput.value;
+        if (!newWorkValue) {
+          alert("입력!");
+          newWorkInput.focus();
+        } else {
+          var idx = Number(todolist.legnth) + 1;
+          var Work = {
+            no: idx,
+            todo: newWorkValue,
+            done: false,
+          };
+          todolist.push(Work);
+          drawList();
+        }
+      }
+
+      // 삭제 버튼 구현
+      function delList(no) {
+        todolist.splice(no, 1);
+        drawList();
+      }
+
+      // 체크 박스 구현
+      function drawLine(no) {
+        todolist[no].done = !todolist[no].done;
+        drawList();
+      }
+
+      drawList(); // 초기 화면
+    </script>
+  </body>
+</html>

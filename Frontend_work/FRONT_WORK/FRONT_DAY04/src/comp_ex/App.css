@@ -16,6 +16,7 @@ input[type="text"] {
   text-decoration-line: line-through;
 }
 
+<<<<<<< Updated upstream
 h1 {
   background-color: beige;
   font-style: italic;
@@ -30,4 +31,8 @@ button {
 
 li {
   list-style-type: none;
+=======
+.checked {
+  text-decoration: line-through;
+>>>>>>> Stashed changes
 }

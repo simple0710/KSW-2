@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.gameBox1 {
+            border: 1px solid orange;
+            width : 300px;
+            height: 100px;
+            overflow: hidden;
+        }
+        div.gameBox2 {
+            border: 1px solid orange;
+            width : 300px;
+            height: 100px;
+            overflow: hidden;
+        }
+        div.gameBox3 {
+            border: 1px solid orange;
+            width : 300px;
+            height: 100px;
+            overflow: hidden;
+        }
+        div.gameBox1 ul {
+            margin: 0;
+            padding: 0px;
+            float: left;
+        }
+        div.gameBox1 li {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        div.gameBox2 ul {
+            margin: 0;
+            padding: 0px;
+            float: left;
+        }
+        div.gameBox2 li {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        div.gameBox3 ul {
+            margin: 0;
+            padding: 0px;
+            float: left;
+        }
+        div.gameBox3 li {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            list-style: none;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>햄버거 하우스 게임</h1>
+    <button id="playBtn">Play</button>
+    <button id="stopBtn">정지</button>
+    <div class="gameBox1"></div>
+    <div class="gameBox2"></div>
+    <div class="gameBox3"></div>
+    <div id="demo">결과 : </div>
+    <script>
+        var starp =0;
+        var stopp =0;
+        
+        function MakeUl(gameBox1){
+            starp++
+            this.SIZE = 5;
+            this.init  = function(){
+                this.ulTag = document.createElement("ul");
+                for(var i=1; i<=3; i++){
+                    var li = document.createElement("li");
+                    li.innerText = i
+                    console.log(li.innerText )
+                    this.ulTag.appendChild(li);
+                }           
+            }  
+        }
+
+        function MakeUl(gameBox2){
+            starp++
+            this.SIZE = 5;
+            this.init  = function(){
+                this.ulTag = document.createElement("ul");
+                for(var i=1; i<=3; i++){
+                    var li = document.createElement("li");
+                    li.innerText = i
+                    this.ulTag.appendChild(li);
+                }
+                
+            }
+            
+            
+        }
+        function MakeUl(gameBox3){
+            starp++
+            this.SIZE = 5;
+            this.init  = function(){
+                this.ulTag = document.createElement("ul");
+                for(var i=1; i<=3; i++){
+                    var li = document.createElement("li");
+                    li.innerText = i
+                    this.ulTag.appendChild(li);
+                }
+                gameBox3.appendChild(this.ulTag);
+                this.play(starp);
+            }
+            
+            this.play = function(starp) {
+                this.ulTag.style.position = "relative";
+                var y = 0;
+
+                var refInterval = setInterval(() => {
+                    if (starp == stopp) {
+                        var demo = document.getElementById("demo");
+
+                        console.log(demo.innerHTML);
+                        let result=[];
+                        
+                        clearTimeout(refInterval);
+                        this.ulTag.style.top = (y - (y % 100)) + "px";
+                        scoreArr.push(-parseInt(this.ulTag.style.top)/100); // 배열에 값 넣기
+                        console.log(scoreArr)
+                        if(scoreArr[0] == scoreArr[1] && scoreArr[0] == scoreArr[2]){
+                            demo.innerHTML = '결과 : 가로 첫째줄 빙고';
+                        }
+                        if(scoreArr[3] == scoreArr[4] == scoreArr[5]){
+                            demo.innerHTML=`결과 : 가로 둘째줄 빙고 `
+                        }
+                        if(scoreArr[6] == scoreArr[7] == scoreArr[8]){
+                            demo.innerHTML=`결과 : 가로 셋째줄 빙고 `
+                        }
+                        if(scoreArr[0] == scoreArr[3] == scoreArr[6]){
+                            demo.innerHTML=`결과 : 세로 첫째줄 빙고 `
+                        }  
+                        if(scoreArr[1] == scoreArr[4] == scoreArr[7]){
+                            demo.innerHTML=`결과 : 세로 둘째줄 빙고 `
+                        }  
+                        if(scoreArr[2] == scoreArr[5] == scoreArr[8]){
+                            demo.innerHTML=`결과 : 세로 셋째줄 빙고 `
+                        }
+                        if(scoreArr[0] == scoreArr[4] == scoreArr[8]){
+                            demo.innerHTML=`결과 : 세로 셋째줄 빙고 `
+                        }
+                        if(scoreArr[2] == scoreArr[4] == scoreArr[6]){
+                            demo.innerHTML=`결과 : 세로 셋째줄 빙고 `
+                        }
+                       
+                                    
+ 
+                    }
+                    else if (y <= -200) {
+                        y = 0;
+                    }else{
+                        y -= 30;
+                        this.ulTag.style.top = y + "px";
+                        
+                    }
+                    
+                    
+                }, 10);
+                
+            }
+            
+
+        }
+        var gameBox1 = document.querySelector(".gameBox1");
+        var gameBox2 = document.querySelector(".gameBox2");
+        var gameBox3 = document.querySelector(".gameBox3");
+        
+
+        var scoreArr = new Array() // 외부에 배열 선언
+        var playBtn = document.getElementById("playBtn");
+        playBtn.onclick=(function (event)  {
+            scoreArr = new Array() // 버튼을 누를 경우 배열 초기화
+            new MakeUl(gameBox1).init();
+            new MakeUl(gameBox1).init();
+            new MakeUl(gameBox1).init();
+
+            new MakeUl(gameBox2).init();
+            new MakeUl(gameBox2).init();
+            new MakeUl(gameBox2).init();
+
+            new MakeUl(gameBox3).init();
+            new MakeUl(gameBox3).init();
+            new MakeUl(gameBox3).init();
+        });
+        var stopBtn = document.getElementById("stopBtn");
+        stopBtn.onclick=(function (event)  {
+            
+            stopp++;
+            
+        });
+
+        
+    </script>
+</body>
+</html>

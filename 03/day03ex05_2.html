@@ -1,0 +1,86 @@
+<!-- 2023/01/27 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li span {
+        display: inline-block;
+        width: 200px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 주말 과제 : HTML, CSS, JS를 이용해서 ToDo-List 구현 -->
+    <div class="container">
+      <h1>할 일 목록</h1>
+      <p>
+        할 일 <input type="text" id="newWork" value="청소하기" />
+        <button id="addBtn">추가</button>
+      </p>
+      <!-- ul도 되고 table로도 가능 -->
+      <ul id="listArea"></ul>
+    </div>
+
+    <script>
+      var todolist = [
+        // done으로 일정 완료 여부 확인
+        { no: 1, todo: "친구 만나서 스터디 하기", done: true },
+        { no: 2, todo: "주말 과제 하기", done: false },
+        { no: 3, todo: "배운 내용 복습하기", done: false },
+        { no: 4, todo: "자바 공부하기", done: false },
+      ];
+
+      var drawLis = function() {
+        var newLis = "";
+        for (var i = 0; i < todolist.length; i++) {
+          var todo = todolist[i];
+          var liTmpStr = `<li>
+            <input type="checkbox" id="${todo.no}"/>
+            <span>${todo.todo}</span>
+            <button class="delBtn" data-no="${todo.no}">삭제</button>
+          </li>`;
+          newLis += liTmpStr;
+        }
+        document.querySelector("#listArea").innerHTML = newLis;
+
+        // 삭제 버튼 구현
+        var delBtnClass = document.querySelectorAll(".delBtn");
+        for (var i = 0; i < delBtnClass.length; i++) {
+          delBtnClass[i].onclick = function (event) {
+            var no = parseInt(event.target.dataset.no);
+            for (var j = 0; j < todolist.length; j++) {
+              if (todolist[j].no == no) {
+                todolist.splice(j, 1);
+              }
+            }
+            drawLis();
+          }        
+        }
+      }
+
+      drawLis();
+      
+      // addBtn을 클릭하면 newWork의 내용이 todoList에 추가되도록 한다.
+      var addBtn = document.querySelector("#addBtn");
+      var newWork = document.querySelector("#newWork");
+      addBtn.onclick = function (event) {
+        var ind = todolist.length;
+        var newWorkValue = newWork.value;
+        // todoList 배열에 먼저 추가.
+        // todoList 배열의 내용을 화면에 보여지게 한다.
+        var Work = {
+          no: Number(todolist.length) + 1,
+          todo: newWorkValue,
+          done: true,
+        };
+        todolist.push(Work);
+        drawLis();
+      };
+    </script>
+  </body>
+</html>
