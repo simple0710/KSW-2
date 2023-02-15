@@ -62,49 +62,20 @@
     </div>
     <div class="middle">
       <div class="left">
-        <div class="leftBtn">st1</div>
-        <div class="leftBtn">st2</div>
-        <div class="leftBtn">st3</div>
-        <div class="leftBtn">st4</div>
-        <div class="leftBtn">st5</div>
+        <div class="leftBtn"></div>
+        <div class="leftBtn"></div>
+        <div class="leftBtn"></div>
+        <div class="leftBtn"></div>
+        <div class="leftBtn"></div>
       </div>
       <div class="center">
       </div>
-      <div class="right">안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.</div>
+      <div class="right"></div>
     </div>
     <div class="footer">
-      동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세
-      무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.
+      
     </div>
   </div>
-  <script>
-    function handleClick(event) {
-      nonClick.forEach((e) => {
-        e.classList.remove("click");
-      });
-      event.target.classList.add("click");
-    }
-    var data = [
-      {title: "st1", word: "설명1설명1설명1설명1설명1설명1설명1설명1설명1설명1설명1설명1설명1설명1"},
-      {title: "st2", word: "설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2설명2"},
-      {title: "st3", word: "설명3설명3설명3설명3설명3설명3설명3설명3설명3설명3설명3설명3설명3설명3"},
-      {title: "st4", word: "설명4설명4설명4설명4설명4설명4설명4설명4설명4설명4설명4설명4설명4설명4"},
-      {title: "st5", word: "설명5설명5설명5설명5설명5설명5설명5설명5설명5설명5설명5설명5설명5설명5"},
-    ];
-    var newLeftBtn = document.querySelectorAll(".leftBtn");
-    document.querySelector('.center').innerHTML=data[0].word;
-    console.log(newLeftBtn);
-    for (var i = 0; i < data.length; i++) {
-      newLeftBtn[i].onclick = function(event) {
-        for (var idx of data) {
-          if (this.innerHTML == idx.title) {
-            document.querySelector(".center").innerHTML = idx.word;
-            break
-          }
-        }
-      }
-    }
-    var div2 = document.getElementsByClassName("leftBtn");
-  </script>
+  
 </body>
 </html>
