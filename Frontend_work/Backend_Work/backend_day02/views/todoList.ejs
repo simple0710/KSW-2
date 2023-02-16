@@ -7,9 +7,16 @@
     <title>할 일 목록</title>
     <script src="http://code.jquery.com/jquery.js"></script>
     <style>
+      *{
+        text-align:center;
+      }
       td.showInput {
         display: none;
       }
+      td.checked {
+        text-decoration-line: line-through;
+      }
+
     </style>
   </head>
   <body>
@@ -35,11 +42,12 @@
           <input
             class="lineBox"
             type="checkbox"
+            <%=todo.done ? 'checked' : ''%>
             data-idx="<%=todo.idx%>"
             data-done="<%=todo.done%>"
           />
         </td>
-        <td class="showTitle"><%=todo.title %></td>
+        <td class="showTitle <%=todo.done ? 'checked':''%>"><%=todo.title %></td>
         <td class="showInput"><input value="<%=todo.title %>" /></td>
         <td><button class="delBtn" data-idx="<%=todo.idx %>">삭제</button></td>
         <td>
@@ -50,12 +58,11 @@
     </table>
 
     <script>
-      $(document).ready(function () {
-        $("input[type=checkbox][class=lineBox]").change(function () {
-          let idx = $(this).data("idx");
-          let done = $(this).data("done");
-          let urlStr = `/todoList/update?idx=${idx}&done=${done}`;
-        });
+      $("input[type=checkbox][class=lineBox]").change(function () {
+        let idx = $(this).data("idx");
+        let done = $(this).data("done");
+        let urlStr = `/todoList/update?idx=${idx}&done=${done}`;
+        location.assign(urlStr);
       });
       $("button.delBtn").click(function () {
         let idx = $(this).data("idx");

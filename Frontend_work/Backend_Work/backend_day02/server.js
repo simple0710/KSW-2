@@ -20,7 +20,7 @@ const todoList = [
   { idx: 2, title: "world", done: false },
   { idx: 3, title: "node공부", done: false },
 ];
-let seqTodoList = 4;
+let seqTodoList = todoList.length + 1;
 
 app.get("/home", (req, res) => {
   res.writeHead(200, { "Content-Type": "text/html; charset=utf8" });
@@ -46,25 +46,32 @@ app.get("/todoList/update", (req, res) => {
   console.log("GET - /todoList/update");
   let idx = req.query.idx;
   let title = req.query.title;
-  let done = req.query.done;
+  let done = req.query.done; // string 형태로 받아진다.
   let index = todoList.findIndex((item, i) => {
     return item.idx == idx;
   });
+  console.log(idx, title, done); // 들어오는 값 확인
   if (index != -1) {
     if (title) {
       // index를 찾는는다.
       // 해당 요소의 title을 변경
-      // 수정하는 경우
+      // 수정
       todoList[index].title = title;
     } else if (done) {
       // 취소선
-      todoList[index].done = done;
+      todoList[index].done = !todoList[index].done;
     } else {
-      // 삭제하는 경우
+      // 삭제
       todoList.splice(index, 1);
     }
-    res.redirect("/todoList");
   }
+  if (idx > 0 && !done) {
+    for (var i=idx;i <= todoList.length; i++){
+      todoList[i-1].idx = i
+    };
+  };
+  seqTodoList = todoList.length + 1;
+  res.redirect("/todoList");
 });
 
 app.get("/json/todoList", (req, res) => {
