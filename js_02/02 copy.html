@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jsDay02Homework.html</title>
+    <style>
+      div.gameBox {
+        border: 1px solid orange;
+        width: 308px;
+        height: 108px;
+        overflow: hidden;
+      }
+      div.gameBox ul {
+        margin: 0;
+        padding: 0px;
+        float: left;
+      }
+      div.gameBox li {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>햄버거 하우스 게임</h1>
+    <div class="gameBox"></div>
+    <button id="stopBtn">정지</button>
+
+    <script>
+      var images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+      var place = 1;
+      var stopFlag = 0
+      var stopBtn = document.getElementById("stopBtn");
+          stopBtn.onclick = function(event){
+            stopFlag += 1;
+          }
+      function MakeUl(gameBox) { 
+        // 그림 생성 함수
+        this.init = function () {
+          this.ulTag = document.createElement("ul");
+          for (var i = 1; i <= 10; i++) {
+            var li = document.createElement("li");
+            // 이미지의 랜덤 인덱스를 통해 값을 정함.
+            li.innerText = images[Math.floor(Math.random()*images.length)];
+            this.ulTag.appendChild(li);
+          }
+          gameBox.appendChild(this.ulTag);
+
+          // 게임 실행
+          this.play(place);
+        };
+
+        this.play = function (p) {
+          this.ulTag.style.position = "relative";
+          var y = 0;
+          place += 1
+          var refInterval = setInterval(() => {
+            y -= 10;
+            if (y <= -1000) {
+              y = 0;
+              if (stopFlag == p) { // 멈추는 조건
+                clearTimeout(refInterval);
+              }
+            }
+            this.ulTag.style.top = y + "px";
+          }, 10);
+        }
+      };
+
+      var gameBox = document.querySelector(".gameBox");
+      new MakeUl(gameBox).init();
+      new MakeUl(gameBox).init();
+      new MakeUl(gameBox).init();
+    </script>
+  </body>
+</html>

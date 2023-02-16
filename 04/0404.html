@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      div.container div {
+        padding: 3px;
+        margin: 3px;
+        border: 1px solid blue;
+        border-radius: 7px;
+        overflow: hidden;
+        width: auto;
+      }
+      .header nav li {
+        float: left;
+        width: 160px;
+        height: 80px;
+        border: 1px solid gray;
+        list-style: none;
+      }
+      div.middle div {
+        width: auto;
+        float: left;
+        height: auto;
+      }
+      /*왼쪽*/
+      div.middle div.left {
+        width: 22%;
+        height: 200px;
+      }
+      div.middle div.left div.left-1 {
+        float: none;
+        height: 14%;
+      }
+      div.middle div.left div.left-2 {
+        float: none;
+        height: 14%;
+      }
+      div.middle div.left div.left-3 {
+        float: none;
+        height: 14%;
+      }
+      div.middle div.left div.left-4 {
+        float: none;
+        height: 14%;
+      }
+      div.middle div.left div.left-5 {
+        float: none;
+        height: 14%;
+      }
+      /*가운데*/
+      div.middle div.center {
+        width: 50%;
+        height: 200px;
+      }
+      div.middle div.center div.center-1 {
+        float: none;
+        height: 19%;
+      }
+      div.middle div.center div.center-2 {
+        float: none;
+      }
+      div.middle div.center div.center-2 div.left {
+        width: 46.5%;
+        height: 80%;
+      }
+      div.middle div.center div.center-2 div.right {
+        width: 46.5%;
+        height: 80%;
+      }
+      div.middle div.center div.center-4 {
+        float: none;
+        height: 19%;
+      }
+      /**/
+      div.middle div.right {
+        width: 22%;
+        height: 200px;
+      }
+      div.middle div.right div.right-1 {
+        float: none;
+        height: 20%;
+      }
+      div.middle div.right div.right-2 {
+        float: none;
+        height: 70%;
+      }
+      div.center > div {
+        height: 80px;
+        width: auto;
+      }
+      div.footer {
+        height: 80px;
+      }
+
+      div.center div:nth-child(1) {
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>메창이의 홈페이지</h1>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>Porfile</li>
+            <li>Gallery</li>
+            <li>Lecture</li>
+            <li>Board</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="middle">
+        <div class="left">
+          <div class="left-1">1</div>
+          <div class="left-2">2</div>
+          <div class="left-3">3</div>
+          <div class="left-4">4</div>
+          <div class="left-5">5</div>
+        </div>
+        <div class="center">
+          <div class="center-1">banner</div>
+          <div class="center-2">
+            <div class="left">
+              <p>왼</p>
+            </div>
+            <div class="right">
+              <p>오</p>
+            </div>
+          </div>
+
+          <div class="center-4">section</div>
+        </div>
+        <div class="right">
+          <div class="right-1">오른1</div>
+          <div class="right-2">오른2</div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>
+          개미는 오늘도 열심히 일을 하네 개미는 언제나 열심히 일을 하네 개미는
+          아무말도 하지 않지만 땀을 뻘뻘 흘리면서 매일 매일을 살기 위해서 열심히
+          일하네 한치 앞도 모르는 험한 이 세상 개미도 배짱이도 알 수 없지만
+          그렇지만 오늘도 행복하다네 개미는 오늘도 열심히 일을 하네 개미는
+          언제나 열심히 일을 하네
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

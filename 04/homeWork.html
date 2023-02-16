@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    div.container div.header {
+      padding-left: 10px;
+      background-color: green;
+      color: white;
+    }
+    div.container div {
+      padding: 3px;
+      margin: 3px;
+      border-radius: 7px;
+      width: 900px;
+      overflow: hidden;
+    }
+    div.middle div {
+      width: 150px;
+      height: 200px;
+      float: left;
+    }
+    div.middle div.center {
+      width: 550px;
+    }
+    div.middle div.left {
+      width: 150px;
+    }
+    div.middle div.left div {
+      background-color: gainsboro;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      height: 20px;
+      width: 130px;
+    }
+    div.middle div.right{
+      margin-right: 0;
+      float: right;
+      background-color: aqua;
+    }
+    div.footer {
+      background-color: gainsboro;
+      clear: both;
+      height: 80px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Title</h1>
+      <h2>subTitle</h2>
+    </div>
+    <div class="middle">
+      <div class="left">
+        <div class="leftBtn"></div>
+        <div class="leftBtn"></div>
+        <div class="leftBtn"></div>
+        <div class="leftBtn"></div>
+        <div class="leftBtn"></div>
+      </div>
+      <div class="center">
+      </div>
+      <div class="right"></div>
+    </div>
+    <div class="footer">
+      
+    </div>
+  </div>
+  
+</body>
+</html>

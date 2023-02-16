@@ -1,0 +1,39 @@
+<!-- 2023/01/27 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day03ex02.html</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      //var arr = new Array();
+      var arr = ["오징어", "꼴뚜기", "대구", "명태"];
+      // 화면 출력 방식
+      // 1. 인덱스 접근
+      for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+      }
+      // 2. of
+      for (var fish of arr) {
+        console.log(fish);
+      }
+      // 3. in(인덱스가 나온다.)
+      for (var i in arr) {
+        console.log(arr[i]);
+      }
+      // 4. forEach(item : 내용, index : 인덱스)
+      arr.forEach(function (item, index) {
+        console.log(item, index);
+      });
+      var newHtml = arr.map(function (item, index) {
+        return "<p>" + item + "</p>";
+      });
+      // id가 demo인 곳에 newHtml 지정
+      document.getElementById("demo").innerHTML = newHtml;
+    </script>
+  </body>
+</html>
