@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    td{
+      text-align: center;
+      width: 200px;
+      margin: 0;
+      border : solid 1px;
+    }
+  </style>
+</head>
+<body>
+  <h1>사람 정보 관리</h1>
+  <fieldset>
+    <legend>title</legend>
+    <form action="/upload" method="post">
+      <table>
+        <tr>
+          <td>아이디</td>
+          <td><input type="text" name="id"></td>
+          <td rowspan="4">사진 미리보기</td>
+        </tr>
+        <tr>
+          <td>성명</td>
+          <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+          <td>이메일</td>
+          <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+          <td>사진</td>
+          <td><input type="button" value="파일 전송"/></td>
+        </tr>
+        <tr>
+          <td colspan="3"><input type="submit" value="저장"/></td>
+        </tr>
+      </table>
+    </form>
+  </fieldset>
+  <h1>사람 목록</h1>
+  <table>
+    <tr>
+      <td>번호</td>
+      <td>아이디</td>
+      <td>성명</td>
+      <td>이메일</td>
+      <td>사진</td>
+    </tr>
+  </table>
+</body>
+</html>
