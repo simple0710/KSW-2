@@ -30,6 +30,8 @@
         border-collapse: collapse;
       }
       tr, td {
+        width: 150px;
+        height: 25px;
         border: 1px solid black;
       }
     </style>
@@ -78,7 +80,7 @@
         <td><%=info.id%></td>
         <td><%=info.name%></td>
         <td><%=info.email%></td>
-        <td><img src="<%=info.photo%>" width="50px" /></td>
+        <td><img src="<%=info.photo%>" width="150px" /></td>
       </tr>
       <%} %>
     </table>
@@ -88,17 +90,17 @@
         let input = e.target;
         if(input.files && input.files[0]) {
           let reader = new FileReader();
-          // 방법 1
+          // 방법
           // reader.addEventListener("load", (e) => {
           //   let readImg = e.target.result;
           //   $("#preview")[0].innerHTML = `<input type="text" value="${readImg}" class="hidden" name="photo" width="200"/>`;
           //   $("#preview")[0].innerHTML += `<img src="${readImg}" name="photo" width="200"/>`;
           // });
 
-          // 방법 1 개선
+          // 방법 개선
           reader.addEventListener("load", (e) => {
             let readImg = e.target.result;
-            $("#preview")[0].innerHTML = `<img src="${readImg}" name="photo" width="200"/>`;
+            $("#preview")[0].innerHTML = `<img src="${readImg}" name="photo" width="150"/>`;
             $("#submit").click((e) => {
               $("#preview")[0].innerHTML += `<input type="text" value="${readImg}" class="hidden" name="photo" width="200"/>`;
             });

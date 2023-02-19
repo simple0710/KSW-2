@@ -18,7 +18,7 @@ router.route("/").get((req, res) => {
 });
 
 infoList = [
-  {no: 1, id: "chan", name: "kim", email: "email@naver.com"},
+  {no: 1, id: "ch", name: "kim", email: "email@naver.com"},
 ];
 
 // infoView.ejs를 보여주는 코드
@@ -36,6 +36,7 @@ router.route("infoView/imgSave").post((req, res) => {
   req.redirect("/infoView");
 });
 
+let infoNo = 2
 router.route("/infoView/upload").post((req, res) => {
   console.log("POST - infoView/upload");
   console.log(req.body);
@@ -43,7 +44,7 @@ router.route("/infoView/upload").post((req, res) => {
   var newName = req.body.name;
   var newEmail = req.body.email;
   var newPhoto = req.body.photo;
-  infoList.push({no: 1, id: newId, name: newName, email: newEmail, photo: newPhoto});
+  infoList.push({no: infoNo++, id: newId, name: newName, email: newEmail, photo: newPhoto});
   res.redirect("/infoView");
 });
 
