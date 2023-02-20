@@ -1,0 +1,38 @@
+* {
+  align-items: center;
+  text-align: center;
+  background-color: blanchedalmond;
+}
+input[type="text"] {
+  border: 0;
+  background-color: rgb(218, 213, 143);
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+  font-size: 15px;
+  color: black;
+}
+.check {
+  text-decoration-line: line-through;
+}
+
+<<<<<<< Updated upstream
+h1 {
+  background-color: beige;
+  font-style: italic;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  background-color: rgb(214, 198, 198);
+  margin: 4px;
+}
+
+li {
+  list-style-type: none;
+=======
+.checked {
+  text-decoration: line-through;
+>>>>>>> Stashed changes
+}

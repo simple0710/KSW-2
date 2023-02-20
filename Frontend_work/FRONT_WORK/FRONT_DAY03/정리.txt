@@ -1,0 +1,36 @@
+FRONT_DAY03에서 npm run dev
+FRONT_DAY03/server에서 npm start
+
+MPA vs SPA
+- MPA(Multi-Page Application)는 클라이언트의 요청에 따라 페이지 생성 반환.
+- 클라이언트가 요청하는 모든 페이지가 서버에 존재
+- 서버가 모든 페이지를 생성하고 응답
+- 페이지의 작은 변화에도 항상 Redict
+
+React
+- 짧고 간결한 함수형 컴포넌트 지원
+- SPA 기반 js 라이브러리
+- 재사용 가능한 UI 컴포넌트 생성. (사용법이 쉬움)
+- HTML UI 컴포넌트 = HTML + CSS + Javascript를 하나로
+- 기존 HTML 화면을 어떻게 React 컴포넌트로 분리 하느냐가 관건
+
+동작 방식 (바뀐 부분만 변경한다.)
+- 필요한 데이터를 서버에 요청하고 응답 받은 데이터를 클라이언트에서 가공해서 UI 생성
+- 서버는 요청 파라미터를 받아서 처리 결과 데이터를 JSON 형식으로 클라이언트에 전달
+
+컴포넌트
+- 엘리먼트와 기능을 부품화 해서 재사용 가능
+- 각 컴포턴트에 맞는 데이터 사용
+① 클래스 컴포넌트 : Presentational/Container 패턴
+② 함수형 컴포넌트 : Stateless/Hooks
+③ 비동기 처리 : Redux Middleware, Suspense API
+
+Virtual DOM : 변경된 것만 반영
+
+JSX : js XML, 트랜스컴파일러로 JSX를 js로 변환
+
+배포하는 법
+- npm run build : 프로젝트를 가볍게 함으로 성능 향상.
+- npm install -g serve
+- serve -s build
+- npx serve -s build
