@@ -130,11 +130,12 @@ $(document).ready(function () {
     // socket 전역 설정 - 서버 URL 동적 사용
     socket = io.connect('http://'+window.location.host);
     //console.log(window.location.host);
-    
-    socket.on('linesend_tocllinet', function(data) {
-        //console.log(data);
-        draw.drawfromServer(data);
-    });
+    setInterval((e)=>{
+        socket.on('linesend_tocllinet', function(data) {
+            //console.log(data);
+            draw.drawfromServer(data);
+        });
+    }, 1000);
     
 });
 
