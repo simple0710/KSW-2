@@ -1,0 +1,32 @@
+숫자1 <input type="text" id="num1" size="5" value="2" /><br />
+숫자2 <input type="text" id="num2" size="5" value="1" /><br />
+숫자3 <input type="text" id="num3" size="5" value="3" /><br />
+<input type="button" id="resultBtn" value="확인" />
+<div id="result">결과:</div>
+
+<script>
+  // 상항연산자 or if문을 이용해서 3개의 숫자를 비교해서
+  // 가장 큰 숫자를 result 영역에 출력하도록 한다.
+  const num1 = document.querySelector("#num1");
+  const num2 = document.querySelector("#num2");
+  const num3 = document.querySelector("#num3");
+  const resultBtn = document.querySelector("#resultBtn");
+  const result = document.querySelector("#result");
+
+  // resultBtn을 클릭하면 num1, num2, num3의 값을 비교한다.
+  resultBtn.addEventListener("click", function (event) {
+    var intNum1 = Number(num1.value);
+    var intNum2 = Number(num2.value);
+    var intNum3 = Number(num3.value);
+    var max =
+      intNum1 > intNum2
+        ? intNum1 > intNum3
+          ? intNum1
+          : intNum3
+        : intNum2 > intNum3
+        ? intNum2
+        : intNum3;
+    var min = Math.min(intNum1, intNum2, intNum3);
+    result.innerHTML = `결과 : ${max}`;
+  });
+</script>
