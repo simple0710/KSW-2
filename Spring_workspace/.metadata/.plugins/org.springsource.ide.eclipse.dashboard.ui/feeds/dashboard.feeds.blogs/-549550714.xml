@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Spring]]></title><description><![CDATA[Level up your Java code and explore what Spring can do for you.]]></description><link>https://spring.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 24 Feb 2023 22:09:01 GMT</lastBuildDate><item><title><![CDATA[Spring Modulith 0.4.1 released]]></title><link>https://spring.io/blog/2023/02/24/spring-modulith-0-4-1-released</link><guid isPermaLink="true">https://spring.io/blog/2023/02/24/spring-modulith-0-4-1-released</guid><dc:creator><![CDATA[Oliver Drotbohm]]></dc:creator><pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&quot;If it&apos;s fun, do it more often&quot; or so they say. Unfortunately, the &lt;a href=&quot;https://spring.io/blog/2023/02/24/spring-modulith-0-4-released&quot;&gt;just announced 0.4 release&lt;/a&gt; of Spring Modulith shipped a tiny glitch we could fix rather quickly, to immediately issue a 0.4.1 one. We were also able to sneak in an additional dependency upgrade to the just released jMolecules 2022.2.3.&lt;/p&gt;
+&lt;p&gt;Find a complete change log in the &lt;a href=&quot;https://github.com/spring-projects-experimental/spring-modulith/releases/tag/0.4.1&quot;&gt;GitHub release page&lt;/a&gt;. We are looking forward to your feedback in the &lt;a href=&quot;https://github.com/spring-projects-experimental/spring-modulith/discussions&quot;&gt;GitHub discussions&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Spring Cloud 2021.0.6 has been released]]></title><link>https://spring.io/blog/2023/02/24/spring-cloud-2021-0-6-has-been-released</link><guid isPermaLink="true">https://spring.io/blog/2023/02/24/spring-cloud-2021-0-6-has-been-released</guid><dc:creator><![CDATA[Oleg Zhurakousky]]></dc:creator><pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;On behalf of the community, I am pleased to announce that the General Availability (RELEASE) of the &lt;a href=&quot;https://cloud.spring.io&quot;&gt;Spring Cloud 2021.0.6&lt;/a&gt; Release Train is available today. The release can be found in &lt;a href=&quot;https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-dependencies/2021.0.6/&quot;&gt;Maven Central&lt;/a&gt;. You can check out the 2021.0.6 &lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2021.0-Release-Notes&quot;&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Notable Changes in the 2021.0.6 Release Train&lt;/h2&gt;
+&lt;p&gt;See the &lt;a href=&quot;https://github.com/orgs/spring-cloud/projects/102&quot;&gt;project page&lt;/a&gt; for all the issues and pull requests included in this release.&lt;/p&gt;
+&lt;h3&gt;Spring Cloud Commons&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add utility method to configure zone-preference load-balancing with user-provided zone (&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-commons/pull/1174&quot;&gt;#1174&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Spring Cloud Netflix&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow setting timeouts for fetching instances (&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-netflix/issues/4110&quot;&gt;#4110&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Spring Cloud Gateway&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed memory leak in CacheRequestBodyGatewayFilter(&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-gateway/pull/2842&quot;&gt;2842&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Spring Cloud Kubernetes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use SSL When secured annotation is true (&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-kubernetes/issues/1141&quot;&gt;#1141&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Spring Cloud OpenFeign&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow configuring request timeout for Apache HttpClient (&lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-openfeign/issues/799&quot;&gt;#799&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Spring Cloud Stream&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Enhancements around custom Routing Functions to ensure they do not create output binding (similar to the provided one)&lt;/li&gt;
+&lt;li&gt;Consolidate core bean propagation between parent/child contexts in the case of multi-binder scenarios&lt;/li&gt;
+&lt;li&gt;Few bug fixes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Spring Cloud Function&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Several improvements and bug fixes primarily around AWS Lambda support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following modules were updated as part of 2021.0.6:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Module&lt;/th&gt;
+&lt;th&gt;Version&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Netflix&lt;/td&gt;
+&lt;td&gt;3.1.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Config&lt;/td&gt;
+&lt;td&gt;3.1.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Build&lt;/td&gt;
+&lt;td&gt;3.1.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Sleuth&lt;/td&gt;
+&lt;td&gt;3.1.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Gateway&lt;/td&gt;
+&lt;td&gt;3.1.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Starter Build&lt;/td&gt;
+&lt;td&gt;2021.0.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Consul&lt;/td&gt;
+&lt;td&gt;3.1.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Contract&lt;/td&gt;
+&lt;td&gt;3.1.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Vault&lt;/td&gt;
+&lt;td&gt;3.1.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Kubernetes&lt;/td&gt;
+&lt;td&gt;2.1.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Zookeeper&lt;/td&gt;
+&lt;td&gt;3.1.3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Task&lt;/td&gt;
+&lt;td&gt;2.4.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Openfeign&lt;/td&gt;
+&lt;td&gt;3.1.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Circuitbreaker&lt;/td&gt;
+&lt;td&gt;2.1.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Stream&lt;/td&gt;
+&lt;td&gt;3.2.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Commons&lt;/td&gt;
+&lt;td&gt;3.1.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Cloud Function&lt;/td&gt;
+&lt;td&gt;3.2.9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As always, we welcome feedback on &lt;a href=&quot;https://github.com/spring-cloud/&quot;&gt;GitHub&lt;/a&gt;, on &lt;a href=&quot;https://gitter.im/spring-cloud/spring-cloud&quot;&gt;Gitter&lt;/a&gt;, on &lt;a href=&quot;https://stackoverflow.com/questions/tagged/spring-cloud&quot;&gt;Stack Overflow&lt;/a&gt;, and on &lt;a href=&quot;https://twitter.com/SpringCloud&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To get started with Maven with a BOM (dependency management only):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;#x3C;dependencyManagement&gt;
+    &amp;#x3C;dependencies&gt;
+        &amp;#x3C;dependency&gt;
+            &amp;#x3C;groupId&gt;org.springframework.cloud&amp;#x3C;/groupId&gt;
+            &amp;#x3C;artifactId&gt;spring-cloud-dependencies&amp;#x3C;/artifactId&gt;
+            &amp;#x3C;version&gt;2021.0.6&amp;#x3C;/version&gt;
+            &amp;#x3C;type&gt;pom&amp;#x3C;/type&gt;
+            &amp;#x3C;scope&gt;import&amp;#x3C;/scope&gt;
+        &amp;#x3C;/dependency&gt;
+    &amp;#x3C;/dependencies&gt;
+&amp;#x3C;/dependencyManagement&gt;
+&amp;#x3C;dependencies&gt;
+    &amp;#x3C;dependency&gt;
+        &amp;#x3C;groupId&gt;org.springframework.cloud&amp;#x3C;/groupId&gt;
+        &amp;#x3C;artifactId&gt;spring-cloud-starter-config&amp;#x3C;/artifactId&gt;
+    &amp;#x3C;/dependency&gt;
+    &amp;#x3C;dependency&gt;
+        &amp;#x3C;groupId&gt;org.springframework.cloud&amp;#x3C;/groupId&gt;
+        &amp;#x3C;artifactId&gt;spring-cloud-starter-netflix-eureka-client&amp;#x3C;/artifactId&gt;
+    &amp;#x3C;/dependency&gt;
+    ...
+&amp;#x3C;/dependencies&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or with Gradle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-groovy&quot;&gt;plugins {
+  id &apos;java&apos;
+  id &apos;org.springframework.boot&apos; version &apos;2.7.9&apos;
+  id &apos;io.spring.dependency-management&apos; version &apos;1.0.15.RELEASE&apos;
+}
+
+group = &apos;com.example&apos;
+version = &apos;0.0.1-SNAPSHOT&apos;
+sourceCompatibility = &apos;8&apos;
+
+repositories {
+  mavenCentral()
+}
+
+ext {
+  set(&apos;springCloudVersion&apos;, &quot;2021.0.6&quot;)
+}
+
+dependencies {
+  implementation &apos;org.springframework.cloud:spring-cloud-starter-config&apos;
+  implementation &apos;org.springframework.cloud:spring-cloud-starter-netflix-eureka-client&apos;
+  //...
+}
+
+dependencyManagement {
+  imports {
+    mavenBom &quot;org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}&quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title><![CDATA[Spring Cloud Function for Azure Function]]></title><link>https://spring.io/blog/2023/02/24/spring-cloud-function-for-azure-function</link><guid isPermaLink="true">https://spring.io/blog/2023/02/24/spring-cloud-function-for-azure-function</guid><dc:creator><![CDATA[Christian Tzolov]]></dc:creator><pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What is the Spring Cloud Function?&lt;/h2&gt;
+&lt;p&gt;Spring Cloud Function is a SpringBoot-based framework allowing users to concentrate on their business logic by implementing them as Java Functions (i.e., Supplier, Function, Consumer). In turn the framework provides necessary abstraction to enable execution of these functions in various environments (e.g., REST, Streaming) as well as serverless environments such as AWS Lambda or Azure Functions, without having to worry about the underlying platform-specific details. This allows developers to focus on writing their business logic and let the framework handle the rest.&lt;/p&gt;
+&lt;p&gt;Spring Cloud Function uses the &lt;code&gt;java.util.function.Function/Supplier/Consumer&lt;/code&gt; Interfaces as building blocks for defining the structure of the function, including the input and output types.&lt;/p&gt;
+&lt;p&gt;Here&apos;s a simple example of a Spring Cloud Function that takes in a string and returns the string in uppercase:&lt;/p&gt;
+&lt;p&gt;First, we define the function interface:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public interface UppercaseFunction extends Function&amp;#x3C;String, String&gt; { }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, we register the function as a bean:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;@Bean
+public UppercaseFunction uppercase() {
+    return value -&gt; value.toUpperCase();
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is a basic example of what you can do with Spring Cloud Function, you can use it for more complex use cases like connecting to a database, or consuming messages from a queue, and more.
+By itself it is just a piece of code implemented as a Java function and registered as Spring Bean. However, with Spring Cloud Function this function can become a handler of a REST request or a message handler triggered by a messaging system such as Kafka. The same function can also execute in serverless environments such as AWS Lambda or Microsoft Azure, all without changes to its implementation. And that is what this post is about, specifically integration of Spring Cloud Function with Microsoft Azure.&lt;/p&gt;
+&lt;h2&gt;What is Azure Java Function?&lt;/h2&gt;
+&lt;p&gt;The Azure Java Functions is a service that allows you to write Java-based serverless functions, running them on Azure infrastructure, with the ability to integrate with other Azure services and frameworks like Spring Boot.&lt;/p&gt;
+&lt;p&gt;The Azure Functions runtime takes care of scaling, security, and monitoring of your function app, and provides easy integration with other Azure services.
+You can read more about Azure Java Functions &lt;a href=&quot;https://learn.microsoft.com/en-us/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Spring Cloud Function as Azure Function&lt;/h4&gt;
+&lt;p&gt;Spring Cloud Function provides an adapter to deploy and run Java functions as Azure Java Functions.&lt;/p&gt;
+&lt;p&gt;In order to use Spring Cloud Function with Azure Java Functions, you need to have the &lt;code&gt;spring-cloud-function-adapter-azure&lt;/code&gt; dependency on your classpath:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;#x3C;dependency&gt;
+    &amp;#x3C;groupId&gt;org.springframework.cloud&amp;#x3C;/groupId&gt;
+    &amp;#x3C;artifactId&gt;spring-cloud-function-adapter-azure&amp;#x3C;/artifactId&gt;
+    &amp;#x3C;version&gt;4.0.1&amp;#x3C;/version&gt;
+&amp;#x3C;/dependency&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It&apos;s important to note that using Spring Cloud Function enables  you to use simple Java Function programming model on Azure Java Functions, but the underlying infrastructure is still Azure Functions, you still need to manage the scaling, security, and monitoring of the Azure Function app, and the integration with other Azure services.&lt;/p&gt;
+&lt;p&gt;Let¡¯s look at the example. For this we need to factor out the business logic (i.e., uppercasing the String) into a dedicated function called &lt;code&gt;uppercase&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;import java.util.function.Function;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class HttpTriggerDemoApplication {
+
+   @Bean
+   public Function&amp;#x3C;String, String&gt; uppercase() {
+       return payload -&gt; {
+           String output = payload.toUpperCase();
+           return String.format(&quot;Input: %s&quot;, output);         
+       }
+   }
+
+   public static void main(String[] args) {
+       SpringApplication.run(HttpTriggerDemoApplication.class, args);
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This example uses the &lt;code&gt;@SpringBootApplication&lt;/code&gt; annotation to configure a Spring Boot application and the &lt;code&gt;@Bean&lt;/code&gt; annotation to define a function bean.
+Then to run this function on Azure Java Function, you need to create a new function app on Azure and configure it to use the Java runtime.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;import java.util.Optional;
+import java.util.function.Function;
+import com.microsoft.azure.functions.ExecutionContext;
+import com.microsoft.azure.functions.HttpMethod;
+import com.microsoft.azure.functions.HttpRequestMessage;
+import com.microsoft.azure.functions.annotation.AuthorizationLevel;
+import com.microsoft.azure.functions.annotation.FunctionName;
+import com.microsoft.azure.functions.annotation.HttpTrigger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class AzureJavaExampleFunctionWithSpring {
+
+   @Autowired
+   private Function&amp;#x3C;String, String&gt; uppercase;
+
+   @FunctionName(&quot;example&quot;)
+   public String execute(
+           @HttpTrigger(name = &quot;req&quot;, methods = { HttpMethod.GET,
+                   HttpMethod.POST }, authLevel = AuthorizationLevel.ANONYMOUS) HttpRequestMessage&amp;#x3C;Optional&amp;#x3C;String&gt;&gt; request,
+           ExecutionContext context) {
+
+       return uppercase.apply(request.getBody().orElse(&quot;Hello World&quot;));
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;AzureJavaExampleFunctionWithSpring&lt;/code&gt; class is annotated with standard Azure annotations such as @FunctionName and &lt;code&gt;@HttpTrigger&lt;/code&gt; and internally it calls the &lt;code&gt;uppercase&lt;/code&gt; function defined in the &lt;code&gt;HttpTriggerDemoApplication&lt;/code&gt;.
+The &lt;code&gt;@Component&lt;/code&gt; annotation is what makes this Azure application also a Spring application, thus providing integration point with Spring Cloud Function and other Spring managed components through  Spring dependency injections such as autowiring the uppercase bean. Note that the &lt;code&gt;AzureJavaExampleFunctionWithSpring&lt;/code&gt; is a fully fledged Spring component, so you can autowire any Spring bean (not only functions), use property configurations and any other Spring Framework feature.&lt;/p&gt;
+&lt;h4&gt;Deploying to Microsoft Azure&lt;/h4&gt;
+&lt;p&gt;You need to package your function as a fat jar, and then deploy it to your Azure Function App. Once deployed you can trigger your function either by HTTP request, events from Azure services like Event Hub, Service Bus, etc.&lt;/p&gt;
+&lt;p&gt;You can also use the maven plugin com.microsoft.azure:azure-functions-maven-plugin to deploy the function to the azure function, the maven plugin can be configured by adding the following to your pom.xml:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;    &amp;#x3C;plugin&gt;
+      &amp;#x3C;groupId&gt;com.microsoft.azure&amp;#x3C;/groupId&gt;
+      &amp;#x3C;artifactId&gt;azure-functions-maven-plugin&amp;#x3C;/artifactId&gt;
+      &amp;#x3C;version&gt;1.22.0&amp;#x3C;/version&gt;
+      &amp;#x3C;configuration&gt;
+  &amp;#x3C;appName&gt;scf-samples&amp;#x3C;/appName&gt;
+  &amp;#x3C;resourceGroup&gt;java-functions-group&amp;#x3C;/resourceGroup&gt;
+  &amp;#x3C;region&gt;westus&amp;#x3C;/region&gt;
+  &amp;#x3C;appServicePlanName&gt;java-functions-app-service-plan&amp;#x3C;/appServicePlanName&gt;
+  &amp;#x3C;pricingTier&gt;EP1&amp;#x3C;/pricingTier&gt;
+  &amp;#x3C;hostJson&gt;${project.basedir}/src/main/resources/host.json&amp;#x3C;/hostJson&gt;
+
+  &amp;#x3C;runtime&gt;
+      &amp;#x3C;os&gt;linux&amp;#x3C;/os&gt;
+      &amp;#x3C;javaVersion&gt;17&amp;#x3C;/javaVersion&gt;
+  &amp;#x3C;/runtime&gt;
+
+  &amp;#x3C;funcPort&gt;7072&amp;#x3C;/funcPort&gt;
+
+  &amp;#x3C;appSettings&gt;
+      &amp;#x3C;property&gt;
+          &amp;#x3C;name&gt;FUNCTIONS_EXTENSION_VERSION&amp;#x3C;/name&gt;
+          &amp;#x3C;value&gt;~4&amp;#x3C;/value&gt;
+      &amp;#x3C;/property&gt;
+  &amp;#x3C;/appSettings&gt;
+      &amp;#x3C;/configuration&gt;
+      &amp;#x3C;executions&gt;
+  &amp;#x3C;execution&gt;
+      &amp;#x3C;id&gt;package-functions&amp;#x3C;/id&gt;
+      &amp;#x3C;goals&gt;
+          &amp;#x3C;goal&gt;package&amp;#x3C;/goal&gt;
+      &amp;#x3C;/goals&gt;
+  &amp;#x3C;/execution&gt;
+      &amp;#x3C;/executions&gt;
+    &amp;#x3C;/plugin&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will integrate your Azure Java Function with Spring Cloud Function and you can leverage the power of Spring Cloud Function like Function composition, POJO based development and many more.&lt;/p&gt;
+&lt;p&gt;For more information check the updated &lt;a href=&quot;https://docs.spring.io/spring-cloud-function/docs/4.0.2-SNAPSHOT/reference/html/azure.html#_microsoft_azure&quot;&gt;Azure adapter referecnce documentation&lt;/a&gt; and various samples that can be found &lt;a href=&quot;https://github.com/spring-cloud/spring-cloud-function/tree/main/spring-cloud-function-samples/function-azure-di-samples&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Appendix1: Convert legacy code. From FunctinoInvoker to DI Azure Function integration&lt;/h4&gt;
+&lt;p&gt;Any existing application that uses FunctionInvoker can easily be converted into the new DI Azure Function integration style.&lt;/p&gt;
+&lt;p&gt;For example let&apos;s convert the following sample application that uses the legacy FunctionInvoker style.&lt;/p&gt;
+&lt;p&gt;The Spring Boot defines the boot application and a Spring Cloud Function called uppercase:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;import java.util.Map;
+import java.util.function.Function;
+import com.microsoft.azure.functions.ExecutionContext;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.function.json.JsonMapper;
+import org.springframework.context.annotation.Bean;
+import org.springframework.messaging.Message;
+
+@SpringBootApplication
+public class Config {
+
+   public static void main(String[] args) throws Exception {
+       SpringApplication.run(Config.class, args);
+   }
+
+   @Bean
+   public Function&amp;#x3C;Message&amp;#x3C;String&gt;, String&gt; uppercase(JsonMapper mapper) {
+       return message -&gt; {
+           String value = message.getPayload();
+           try {
+               Map&amp;#x3C;String, String&gt; map = mapper.fromJson(value, Map.class);
+
+               if(map != null)
+                   map.forEach((k, v) -&gt; map.put(k, v != null ? v.toUpperCase() : null));
+
+               return mapper.toString(map);
+           } catch (Exception e) {
+               e.printStackTrace();
+               return (&quot;Function error: - bad request&quot;);
+           }
+       };
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and the FunctionInvoker that uses the uppercase function as an Azure Function would look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;import com.microsoft.azure.functions.ExecutionContext;
+import com.microsoft.azure.functions.HttpMethod;
+import com.microsoft.azure.functions.HttpRequestMessage;
+import com.microsoft.azure.functions.annotation.AuthorizationLevel;
+import com.microsoft.azure.functions.annotation.FunctionName;
+import com.microsoft.azure.functions.annotation.HttpTrigger;
+import java.util.Optional;
+import org.springframework.cloud.function.adapter.azure.FunctionInvoker;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.support.MessageBuilder;
+
+public class UppercaseHandler extends FunctionInvoker&amp;#x3C;Message&amp;#x3C;String&gt;, String&gt; {
+
+   @FunctionName(&quot;uppercase&quot;)
+   public String execute(
+       @HttpTrigger(
+           name = &quot;req&quot;,
+           methods = {HttpMethod.GET, HttpMethod.POST},
+           authLevel = AuthorizationLevel.ANONYMOUS) HttpRequestMessage&amp;#x3C;Optional&amp;#x3C;String&gt;&gt; request,
+       ExecutionContext context
+   ) {
+       context.getLogger().warning(&quot;Using Java (&quot; + System.getProperty(&quot;java.version&quot;) + &quot;)&quot;);
+       Message&amp;#x3C;String&gt; message = MessageBuilder.withPayload(request.getBody().get())
+           .copyHeaders(request.getHeaders()).build();
+       return handleRequest(message, context);
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that by convention the &lt;code&gt;@FunctionName&lt;/code&gt; must match the @Bean function name (in the Config class).&lt;/p&gt;
+&lt;p&gt;It is straightforward to refactor the UppercaseHandler class so that we replace the legacy FunctionInvoker with DI like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;import com.microsoft.azure.functions.ExecutionContext;
+import com.microsoft.azure.functions.HttpMethod;
+import com.microsoft.azure.functions.HttpRequestMessage;
+import com.microsoft.azure.functions.annotation.AuthorizationLevel;
+import com.microsoft.azure.functions.annotation.FunctionName;
+import com.microsoft.azure.functions.annotation.HttpTrigger;
+
+import java.util.Optional;
+
+import org.springframework.cloud.function.adapter.azure.FunctionInvoker;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.support.MessageBuilder;
+
+@Component
+public class UppercaseHandler {
+
+   @Autowired
+   private Function&amp;#x3C;Message&amp;#x3C;String&gt;, String&gt; uppercase;
+
+   @FunctionName(&quot;uppercase&quot;)
+   public String execute(
+       @HttpTrigger(
+           name = &quot;req&quot;,
+           methods = {HttpMethod.GET, HttpMethod.POST},
+           authLevel = AuthorizationLevel.ANONYMOUS) HttpRequestMessage&amp;#x3C;Optional&amp;#x3C;String&gt;&gt; request,
+       ExecutionContext context
+   ) {
+       context.getLogger().warning(&quot;Using Java (&quot; + System.getProperty(&quot;java.version&quot;) + &quot;)&quot;);
+       Message&amp;#x3C;String&gt; message = MessageBuilder.withPayload(request.getBody().get())
+           .copyHeaders(request.getHeaders()).build();
+       return uppercase.apply(message);
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Add the &lt;code&gt;@Component&lt;/code&gt; class annotation.&lt;/li&gt;
+&lt;li&gt;Remove the &lt;code&gt;FunctionInvoke&lt;/code&gt; class inheritance.&lt;/li&gt;
+&lt;li&gt;Autowire the required Function beans. Any Spring service and autowiring technique is supported.&lt;/li&gt;
+&lt;li&gt;Replace the &lt;code&gt;handleRequest&lt;/code&gt; method call with an explicit function call.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is all now you can build and deploy your application.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Spring Modulith 0.4 released]]></title><link>https://spring.io/blog/2023/02/24/spring-modulith-0-4-released</link><guid isPermaLink="true">https://spring.io/blog/2023/02/24/spring-modulith-0-4-released</guid><dc:creator><![CDATA[Oliver Drotbohm]]></dc:creator><pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Dear Spring community, I am excited to announce the release of Spring Modulith 0.4. The release ships with the following new features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A new &lt;a href=&quot;https://docs.spring.io/spring-modulith/docs/0.4.0/reference/html/#testing.scenarios&quot;&gt;&lt;code&gt;Scenario&lt;/code&gt; API&lt;/a&gt; to allow the concise definition of integration tests for application modules, specifically tailored around the idea of them integrating via asynchronously handled, transaction bound events.&lt;/li&gt;
+&lt;li&gt;A new &lt;a href=&quot;https://docs.spring.io/spring-modulith/docs/0.5.0-SNAPSHOT/reference/html/#appendix.artifacts&quot;&gt;starter&lt;/a&gt; that allows to pull in the runtime support in a concise way, primarily to ease the usage of &lt;code&gt;ApplicationModuleInitializers&lt;/code&gt; (&lt;a href=&quot;https://github.com/spring-projects-experimental/spring-modulith/issues/132&quot;&gt;GH-132&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;The event publication registry now returns uncompleted events in ascending order of their publication dates (&lt;a href=&quot;https://github.com/spring-projects-experimental/spring-modulith/issues/133&quot;&gt;GH-133&lt;/a&gt;) and provides better logging (&lt;a href=&quot;https://github.com/spring-projects-experimental/spring-modulith/issues/125&quot;&gt;GH-125&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;A few tiny optimizations in our documentation generation support, especially if the UML style is for component diagrams (&lt;a href=&quot;https://github.com/spring-projects-experimental/spring-modulith/issues/130&quot;&gt;GH-130&lt;/a&gt;, &lt;a href=&quot;https://github.com/spring-projects-experimental/spring-modulith/issues/140&quot;&gt;GH-140&lt;/a&gt;, &lt;a href=&quot;https://github.com/spring-projects-experimental/spring-modulith/issues/141&quot;&gt;GH-141&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Infrastructure upgrades to the latest versions of Spring Boot, ArchUnit and Structurizr.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Find a complete change log in the &lt;a href=&quot;https://github.com/spring-projects-experimental/spring-modulith/releases/tag/0.4.0&quot;&gt;GitHub release page&lt;/a&gt;. We are looking forward to your feedback in the &lt;a href=&quot;https://github.com/spring-projects-experimental/spring-modulith/discussions&quot;&gt;GitHub discussions&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Spring Boot 3.1.0-M1 available now]]></title><link>https://spring.io/blog/2023/02/24/spring-boot-3-1-0-m1-available-now</link><guid isPermaLink="true">https://spring.io/blog/2023/02/24/spring-boot-3-1-0-m1-available-now</guid><dc:creator><![CDATA[Phil Webb]]></dc:creator><pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;On behalf of the team and everyone who has contributed, I&apos;m happy to announce that Spring Boot &lt;code&gt;3.1.0-M1&lt;/code&gt; has been released and is now available from &lt;a href=&quot;https://repo.spring.io/milestone&quot;&gt;https://repo.spring.io/milestone&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/spring-projects/spring-boot/releases/tag/v3.1.0-M1&quot;&gt;105 enhancements, documentation improvements, dependency upgrades, and bug fixes&lt;/a&gt;. Notable new features include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Different log levels for file and console&lt;/li&gt;
+&lt;li&gt;Maximum HTTP Response Header Size&lt;/li&gt;
+&lt;li&gt;Many dependency upgrades&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please see the &lt;a href=&quot;https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.1.0-M1-Release-Notes&quot;&gt;release notes&lt;/a&gt; for more details and upgrade instructions.&lt;/p&gt;
+&lt;p&gt;Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;
+&lt;h3&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;If you&apos;re interested in helping out, check out the &lt;a href=&quot;https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution&quot;&gt;&quot;ideal for contribution&quot; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href=&quot;https://stackoverflow.com&quot;&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href=&quot;https://stackoverflow.com/tags/spring-boot&quot;&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href=&quot;https://gitter.im/spring-projects/spring-boot&quot;&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://spring.io/projects/spring-boot/&quot;&gt;Project Page&lt;/a&gt; | &lt;a href=&quot;https://github.com/spring-projects/spring-boot&quot;&gt;GitHub&lt;/a&gt; | &lt;a href=&quot;https://github.com/spring-projects/spring-boot/issues&quot;&gt;Issues&lt;/a&gt; | &lt;a href=&quot;https://docs.spring.io/spring-boot/docs/3.1.0-M1/reference/html&quot;&gt;Documentation&lt;/a&gt; | &lt;a href=&quot;https://stackoverflow.com/questions/tagged/spring-boot&quot;&gt;Stack Overflow&lt;/a&gt; | &lt;a href=&quot;https://gitter.im/spring-projects/spring-boot&quot;&gt;Gitter&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A Bootiful Podcast: It's Glenn Renfro! Listen to this episode if you want to feel better]]></title><link>https://spring.io/blog/2023/02/23/a-bootiful-podcast-its-glenn-renfro-listen-to-this-episode-if-you-want-to</link><guid isPermaLink="true">https://spring.io/blog/2023/02/23/a-bootiful-podcast-its-glenn-renfro-listen-to-this-episode-if-you-want-to</guid><dc:creator><![CDATA[Josh Long]]></dc:creator><pubDate>Thu, 23 Feb 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hi, Spring fans! Today &lt;a href=&quot;https://twitter.com/starbuxman&quot;&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Atlanta JUG, Devnexus, Spring Cloud Task, Spring Integration, Spring Cloud Dataflow luminary, and the living embodiment of the word &quot;joy:&quot; &lt;a href=&quot;https://twitter.com/cppwfs&quot;&gt;Glenn Renfro (@cppwfs)&lt;/a&gt;?&lt;/p&gt;
+&lt;p&gt;Watch the podcast in &lt;a href=&quot;https://www.youtube.com/watch?v=ti35FIO3Kqg&quot;&gt;living color on Youtube!&lt;/a&gt;&lt;/p&gt;
+&lt;iframe title=&quot;It¡¯s Glenn Renfro! Listen to this episode if you want to feel better&quot; allowtransparency=&quot;true&quot; height=&quot;150&quot; width=&quot;100%&quot; style=&quot;border: none; min-width: min(100%, 430px);&quot; scrolling=&quot;no&quot; data-name=&quot;pb-iframe-player&quot; src=&quot;https://www.podbean.com/player-v2/?i=kisn9-139d50d-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[From Spring Native to Spring Boot 3]]></title><link>https://spring.io/blog/2023/02/23/from-spring-native-to-spring-boot-3</link><guid isPermaLink="true">https://spring.io/blog/2023/02/23/from-spring-native-to-spring-boot-3</guid><dc:creator><![CDATA[S?bastien Deleuze]]></dc:creator><pubDate>Thu, 23 Feb 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Today, we are finishing to transition the Spring support for building native executables from the experimental &lt;a href=&quot;https://github.com/spring-attic/spring-native&quot;&gt;Spring Native&lt;/a&gt; project to the official &lt;a href=&quot;https://docs.spring.io/spring-boot/docs/current/reference/html/native-image.html&quot;&gt;Spring Boot GraalVM native image support&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In practice, that means we are archiving the Spring Native GitHub repository and moving it to the &lt;a href=&quot;https://github.com/spring-attic&quot;&gt;https://github.com/spring-attic&lt;/a&gt; organization. There will be no new release of Spring Native (based on Spring Boot 2.x) and we are encouraging all Spring Boot users to migrate to Spring Boot 3.x to leverage its official native support.&lt;/p&gt;
+&lt;h2&gt;SpringOne&lt;/h2&gt;
+&lt;p&gt;If you missed &lt;a href=&quot;https://springone.io/&quot;&gt;SpringOne&lt;/a&gt; keynote, be aware that the recording of the section dedicated to Spring Boot 3 native support is available in 2 parts.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://youtube.com/watch?v=4qaMKTPTQU8&amp;#x26;feature=shares&amp;#x26;t=1524&quot;&gt;Part 1&lt;/a&gt; with Thomas Wuerthinger, the GraalVM project lead, about the win-win collaboration between Spring and GraalVM teams.
+&lt;a href=&quot;https://youtube.com/watch?v=4qaMKTPTQU8&amp;#x26;feature=shares&amp;#x26;t=1524&quot;&gt;&lt;img src=&quot;//images.ctfassets.net/mnrwi97vnhts/23drAJMso6bREnU7Pn38Cp/355624288c4a8d81ea1a0ae3b291e345/main-stage-thomas.jpg&quot; alt=&quot;SpringOne keynote with Thomas&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And &lt;a href=&quot;https://youtube.com/watch?v=4qaMKTPTQU8&amp;#x26;feature=shares&amp;#x26;t=2194&quot;&gt;part 2&lt;/a&gt; with Sandra Ahlgrimm, Senior Cloud Advocate at Microsoft, is about running Spring applications in a scale to zero fashion on Azure.
+&lt;a href=&quot;https://youtube.com/watch?v=4qaMKTPTQU8&amp;#x26;feature=shares&amp;#x26;t=2194&quot;&gt;&lt;img src=&quot;//images.ctfassets.net/mnrwi97vnhts/3WEiLjiS90eNkk4XhhX2xN/463bf42629cc62ada010b76077a3bbdd/main-stage-homepage.jpg&quot; alt=&quot;SpringOne keynote with Sandra&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can also watch the &lt;a href=&quot;https://www.youtube.com/watch?v=tS61BMYdOPU&quot;&gt;From Spring Native to Spring Boot 3&lt;/a&gt; breakout session &lt;a href=&quot;https://spring.io/team/mhalbritter&quot;&gt;Moritz Halbritter&lt;/a&gt; and I presented.&lt;/p&gt;
+&lt;h2&gt;Let&apos;s celebrate!&lt;/h2&gt;
+&lt;p&gt;The goal of each Spring experimental project is to reach the General Availability stage, and that&apos;s what Spring Native did with Spring Boot 3 native support. We were not sure to succeed given the level of quality expected from the Spring portfolio and the technical challenges we had to solve. But we did it!&lt;/p&gt;
+&lt;p&gt;So let&apos;s use this opportunity to celebrate this achievement with the Spring community and the Spring team which have been collaborating closely to make native a first class compilation target for Spring applications after 3237 commits, 330 pull requests and 2800 GitHub stars. This would have not been possible with all the useful feedback we got.&lt;/p&gt;
+&lt;p&gt;I would like to send a special thank you to &lt;a href=&quot;https://spring.io/team/aclement&quot;&gt;Andy Clement&lt;/a&gt; who contributed most of the project initially, and to &lt;a href=&quot;https://spring.io/team/snicoll&quot;&gt;St?phane Nicoll&lt;/a&gt; and &lt;a href=&quot;https://spring.io/team/bclozel&quot;&gt;Brian Clozel&lt;/a&gt; who where instrumental in making native officially supported in Spring Boot 3.&lt;/p&gt;
+&lt;p&gt;But let&apos;s also celebrate the fact that we now have the Gradle and Maven &lt;a href=&quot;https://github.com/graalvm/native-build-tools&quot;&gt;Native Build Tools &lt;/a&gt; plugins in order to provide support out of the box &lt;a href=&quot;https://www.graalvm.org/native-image/libraries-and-frameworks/&quot;&gt;for various open source JVM libraries&lt;/a&gt;. So far Spring has been the most prolific contributor but we see an increasing number of other contributors in pull-requests coming to the &lt;a href=&quot;https://github.com/oracle/graalvm-reachability-metadata&quot;&gt;GraalVM metadata reachability repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.graalvm.org/native-image/libraries-and-frameworks/&quot;&gt;&lt;img src=&quot;//images.ctfassets.net/mnrwi97vnhts/2UYD1Tj7iaPyyADFac39Bw/e835a9513bcd40ac56a0316d04bb9d39/native-libraries.png&quot; alt=&quot;Libraries and Frameworks Tested with Native Image&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And the best part of it is that Spring Boot 3 does not require any GraalVM substitution to patch Spring or JVM libraries. The code you run is the code of your open source library, which means better security, better debuggability and better maintainability.&lt;/p&gt;
+&lt;p&gt;Let&apos;s not forget all the energy we have put in introducing an extensive integration testing infrastructure that has materialized via the &lt;a href=&quot;https://github.com/spring-projects/spring-aot-smoke-tests&quot;&gt;spring-aot-smoke-tests&lt;/a&gt; project that allow to track the status of the AOT and native support for a wide range of use cases.
+&lt;a href=&quot;https://ci.spring.io/teams/spring-aot-smoke-tests/pipelines/spring-aot-smoke-tests-1.0.x&quot;&gt;&lt;img src=&quot;//images.ctfassets.net/mnrwi97vnhts/7wbva3qMiug4INl7Tsp2le/1274071f59bfb1b01daadb92fe8e5a4b/Concourse.png&quot; alt=&quot;AOT smoke tests CI&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;The journey continue&lt;/h2&gt;
+&lt;p&gt;Thanks to its Ahead-of-Time transformation engine, the quality of the native support provided by Spring Boot 3 is already significantly better than with Spring Native, but is obviously not perfect so we are continuing to increase the scope of the support in each Spring Boot patch releases with improvements in the various projects of the Spring portfolio. And we are excited to be able to benefits from upcoming GraalVM native image compiler and tooling improvements.&lt;/p&gt;
+&lt;p&gt;Cheers!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Spring Boot 3.0.3 available now]]></title><link>https://spring.io/blog/2023/02/23/spring-boot-3-0-3-available-now</link><guid isPermaLink="true">https://spring.io/blog/2023/02/23/spring-boot-3-0-3-available-now</guid><dc:creator><![CDATA[Andy Wilkinson]]></dc:creator><pubDate>Thu, 23 Feb 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;On behalf of the team and everyone who has contributed, I&apos;m happy to announce that Spring Boot &lt;code&gt;3.0.3&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/spring-projects/spring-boot/releases/tag/v3.0.3&quot;&gt;56 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;
+&lt;h3&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;If you&apos;re interested in helping out, check out the &lt;a href=&quot;https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution&quot;&gt;&quot;ideal for contribution&quot; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href=&quot;https://stackoverflow.com&quot;&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href=&quot;https://stackoverflow.com/tags/spring-boot&quot;&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href=&quot;https://gitter.im/spring-projects/spring-boot&quot;&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://spring.io/projects/spring-boot/&quot;&gt;Project Page&lt;/a&gt; | &lt;a href=&quot;https://github.com/spring-projects/spring-boot&quot;&gt;GitHub&lt;/a&gt; | &lt;a href=&quot;https://github.com/spring-projects/spring-boot/issues&quot;&gt;Issues&lt;/a&gt; | &lt;a href=&quot;https://docs.spring.io/spring-boot/docs/3.0.3/reference/html&quot;&gt;Documentation&lt;/a&gt; | &lt;a href=&quot;https://stackoverflow.com/questions/tagged/spring-boot&quot;&gt;Stack Overflow&lt;/a&gt; | &lt;a href=&quot;https://gitter.im/spring-projects/spring-boot&quot;&gt;Gitter&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Spring Boot 2.7.9 available now]]></title><link>https://spring.io/blog/2023/02/23/spring-boot-2-7-9-available-now</link><guid isPermaLink="true">https://spring.io/blog/2023/02/23/spring-boot-2-7-9-available-now</guid><dc:creator><![CDATA[Moritz Halbritter]]></dc:creator><pubDate>Thu, 23 Feb 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;On behalf of the team and everyone who has contributed, I&apos;m happy to announce that Spring Boot &lt;code&gt;2.7.9&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/spring-projects/spring-boot/releases/tag/v2.7.9&quot;&gt;33 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;
+&lt;h3&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;If you&apos;re interested in helping out, check out the &lt;a href=&quot;https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution&quot;&gt;&quot;ideal for contribution&quot; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href=&quot;https://stackoverflow.com&quot;&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href=&quot;https://stackoverflow.com/tags/spring-boot&quot;&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href=&quot;https://gitter.im/spring-projects/spring-boot&quot;&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://spring.io/projects/spring-boot/&quot;&gt;Project Page&lt;/a&gt; | &lt;a href=&quot;https://github.com/spring-projects/spring-boot&quot;&gt;GitHub&lt;/a&gt; | &lt;a href=&quot;https://github.com/spring-projects/spring-boot/issues&quot;&gt;Issues&lt;/a&gt; | &lt;a href=&quot;https://docs.spring.io/spring-boot/docs/2.7.9/reference/html&quot;&gt;Documentation&lt;/a&gt; | &lt;a href=&quot;https://stackoverflow.com/questions/tagged/spring-boot&quot;&gt;Stack Overflow&lt;/a&gt; | &lt;a href=&quot;https://gitter.im/spring-projects/spring-boot&quot;&gt;Gitter&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Spring Batch 5.0.1 and 4.3.8 available now]]></title><link>https://spring.io/blog/2023/02/23/spring-batch-5-0-1-and-4-3-8-available-now</link><guid isPermaLink="true">https://spring.io/blog/2023/02/23/spring-batch-5-0-1-and-4-3-8-available-now</guid><dc:creator><![CDATA[Mahmoud Ben Hassine]]></dc:creator><pubDate>Wed, 22 Feb 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Batch 5.0.1 and 4.3.8 have been released to Maven Central.&lt;/p&gt;
+&lt;p&gt;These patch releases come with a number of bug fixes, enhancements, and dependency updates. For more details about the changes, please refer to the change logs: &lt;a href=&quot;https://github.com/spring-projects/spring-batch/releases/tag/v5.0.1&quot;&gt;5.0.1&lt;/a&gt; and &lt;a href=&quot;https://github.com/spring-projects/spring-batch/releases/tag/4.3.8&quot;&gt;4.3.8&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;These versions will be shipped with Spring Boot 3.0.3 and 2.7.9 respectively. I would like to thank all contributors who had a role in these releases! We look forward to your feedback on &lt;a href=&quot;https://github.com/spring-projects/spring-batch/issues&quot;&gt;Github&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/springbatch&quot;&gt;Twitter&lt;/a&gt;, and &lt;a href=&quot;https://stackoverflow.com/questions/tagged/spring-batch&quot;&gt;StackOverflow&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&quot;https://spring.io/projects/spring-batch&quot;&gt;Spring Batch Home&lt;/a&gt; | &lt;a href=&quot;https://github.com/spring-projects/spring-batch&quot;&gt;Source on Github&lt;/a&gt; | &lt;a href=&quot;https://docs.spring.io/spring-batch/docs/5.0.1/reference/html/index.html&quot;&gt;Reference documentation&lt;/a&gt;&lt;/p&gt;</content:encoded></item></channel></rss>

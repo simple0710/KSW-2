@@ -1,0 +1,22 @@
+package org.comstudy.myweb;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SaramController extends HttpServlet {
+   @Override
+   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      String ctxPath = req.getContextPath();
+      String reqUri = req.getRequestURI();
+      
+      System.out.println("doGet() - SaramController 실행");
+      
+      // printf()함수는 변환 문자열 사용 가능.
+      // %s - string, %d - deciaml, %i - integer, %f - float ...
+      System.out.printf("%s, %s\n", ctxPath, reqUri);
+	}
+}

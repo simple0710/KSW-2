@@ -1,0 +1,16 @@
+package org.comstudy.myapp;
+
+import org.comstudy.myapp.model.SaramDTO;
+
+public class main {
+	// Run As > Run on Server 실행 : 웹 서버 어플리케이션 실행
+	// Run As > Java Application 실행 : main()에서 실행 되는 Application
+	public static void main(String[] args) {
+		// 웹에서 실행 되지 않음.
+		System.out.println("Hello Spring World!");
+		
+		SaramDTO saramDTO = new SaramDTO(11, "KIM", "김유신", 35);
+		System.out.println(saramDTO);
+	}
+
+}

@@ -1,0 +1,12 @@
+package org.comstudy.myweb;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SaramController extends HttpServlet{
+	private void doGet(HttpServletRequest req, HttpServletResponse resp) throws e {
+		// TODO Auto-generated method stub
+
+	}
+}

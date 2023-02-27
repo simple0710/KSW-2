@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1>길동이의 홈페이지</h1>
+	<h3>오신것을 환영합니다!</h3>
+	<hr/>
+	<ul>
+		<li><a href="hello">Hello Servlet 실행</a></li>
+	</ul>
+</body>
+</html>
+	<!-- 
+	JSP에서 젠코딩 가능하게 하려면
+	1. marketplace에서 emmet 검색 및 설치
+	2. 이클립스 Window > prefrerences에서 emmet 설정에 .jsp 확장자 추가
+	-->
+	<welcom-file-list>
+	<servlet>
+     	<servlet-name>appServlet</servlet-name>
+    	<servlet-class>org.comstudy.myweb.HelloServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+      	<servlet-name>appServlet</servlet-name>
+      	<!-- urlPattern에 주소는 앞에 /를 반드시 붙인다. -->
+     	<url-pattern>/hello</url-pattern>
+  	</servlet-mapping>
+	</welcom-file-list>

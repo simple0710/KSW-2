@@ -1,0 +1,7 @@
+package org.comstudy.myweb;
+
+import javax.servlet.http.HttpServlet;
+
+public class SaramServlet extends HttpServlet {
+
+}

@@ -1,0 +1,13 @@
+package org.comstudy.myapp;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class SaramController {
+	@RequestMapping("/saram/list")
+	public String saram() {
+		System.out.println("SaramController의 saram() 메소드 호출");
+		return "sram/list.jsp"; // WEB-INF/views/saram/list.jsp를 보여준다. 폴더랑 파일 만들자
+	}
+}

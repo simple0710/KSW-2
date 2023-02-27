@@ -1,0 +1,36 @@
+package org.comstudy.myweb;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+// 서블릿 클래스는 HttpServlet을 상속 받아야 한다.
+public class HelloServlet extends HttpServlet {
+   // 중요 : 서블릿 실행 하는 방법은 web.xml에 매핑 시킨 주소를 브라라우저 주소창에 입력 한다.
+   // 브라우저를 이용해서 실행 해야만 한다.
+
+   // doGet을 입력 한 후에 "Ctrl + spacebar"를 치면 자동 완성 된다.
+   @Override
+   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      // 서버의 콘솔에 출력 된다.
+      System.out.println("doGet() - HelloServlet 호출 됨.");
+      
+      // 브라우저에 출력 되는 방식 
+      // Request 객체에는 요청 정보(파라미터, session, uri 등)가 저장된다.
+      // Response 객체에는 브라우저에 처리하는 정보(forward, redirect 등)가 저장 된다.
+      
+      // 브라우저에 출력(printWirter)
+      PrintWriter out = resp.getWriter();
+      out.println("Hello World");
+      
+   }
+   
+   // 오버라이드(Override) - 부모 클래스의 멤버 메서드를 자식 클래스가 재 정의 하는 것.
+   // @Override 어노테이션으로 검증
+   // 우클릭 > Source > Override/Implement methods
+   
+}

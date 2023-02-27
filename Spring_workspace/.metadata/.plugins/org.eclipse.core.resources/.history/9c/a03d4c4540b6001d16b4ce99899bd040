@@ -1,0 +1,5 @@
+package org.comstudy.myweb;
+
+public class HelloServlet {
+
+}

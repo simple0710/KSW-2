@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>jsp_servlet_ex01</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 
+  서블릿 매핑(Servlet 2.x 방식) 
+  servlet에서는 실행 되는 클래스의 위치
+  servlet-mapping에는 브라우저에 입력되는 주소(URL)의 패턴이 있다.
+  브라우저의 주소와 실행 할 서블릿 클래스를 연결 해 주는 역할.
+  브라우저 주소에 "/hello"로 입력된다면 helloServlet이 실행 되도록 하는것.
+  -->
+  <servlet>
+     <servlet-name>appServlet</servlet-name>
+     <servlet-class>org.comstudy.myweb.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>appServlet</servlet-name>
+     <!-- url-pattern 에 주소는 앞에 /를 반드시 붙인다. -->
+     <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <!--  사람 정보를 관리하는 서블릿 매핑 -->
+  <servlet>
+     <servlet-name>saramServlet</servlet-name>
+     <servlet-class>org.comstudy.myweb.saramServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>saramServlet</servlet-name>
+     <!-- 
+     url-pattern에는 *을 이용해서 다양한 형태로 만들 수 있다.
+     별(*)은 모든 케이스를 의미. 
+     -->
+     <url-pattern>*.saram</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

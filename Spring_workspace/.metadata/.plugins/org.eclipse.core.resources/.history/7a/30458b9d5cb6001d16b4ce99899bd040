@@ -1,0 +1,37 @@
+package org.comstudy.myweb;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+// web.xml에 servlet-mapping 
+//@WebServlet("/saram")
+public class SaramController extends HttpServlet {
+
+   @Override
+   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      String ctxPath = req.getContextPath();
+      String reqUri = req.getRequestURI();
+      
+      System.out.println("doGet() - SaramController 실행");
+      
+      // printf()함수는 변환 문자열 사용 가능.
+      // %s - string, %d - deciaml, %i - integer, %f - float ...
+      // Request URI = Context path + file name
+      System.out.printf("%s, %s\n", ctxPath, reqUri);
+      
+      int beginIndex = ctxPath.length();
+      String urlPattern = reqUri.substring(beginIndex);
+      System.out.println("urlPattern => " + urlPattern);
+      
+      // view 페이지로 forward 하기
+      // RequestDispatcher 객체를 이용한 view 페이지 forward
+      req.getRequestDispatcher(viewName);
+   }
+   
+}
