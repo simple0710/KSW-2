@@ -31,6 +31,21 @@
 	for(String user : userList) {
 		out.println(user + "<br/>");
 	}
+	String realPath = request.getSession().getServletContext().getRealPath("/");
+	out.println(realPath);
 	%>
+	<!-- 
+	MVC 패턴 : Model 2라고도 한다. 모델 + 뷰 + 컨트롤러 형태로 만들어 진다.
+	모델 : DB와 연관 되는 부분. DAO, DTO
+	뷰 : 사용자가 보는 화면과 연관 되는 부분. JSP페이지, HTML + Ajax + Thymeleaf, 머스타치 ...
+	콘트롤러 : 모델 2에서는 Servlet이 컨틀롤러 역할을 한다. 모델 1에서는 JSP가 (컨트롤러+모델) 역할을 대신한다.
+	
+	
+	-->
+	
+	<!-- 
+	JSP 실행 => Servlet.java파일로 변환 => 컴파일을 거친 후 톰캣에서 .class 파일 실행
+	=> 최종 클라이언트 HTML 소스가 전달 된다.
+	 -->
 </body>
 </html>

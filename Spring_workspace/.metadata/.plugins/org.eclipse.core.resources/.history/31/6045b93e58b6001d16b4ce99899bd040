@@ -1,7 +1,0 @@
-package org.comstudy.myweb;
-
-import javax.servlet.http.HttpServlet;
-
-public class SaramController2 extends HttpServlet {
-
-}

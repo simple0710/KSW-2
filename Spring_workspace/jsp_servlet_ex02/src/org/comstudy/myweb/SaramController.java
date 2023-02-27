@@ -51,5 +51,4 @@ public class SaramController extends HttpServlet {
       // request와 response 객체를 인자로 전달한다.
       view.forward(req, resp);
    }
-   
 }
