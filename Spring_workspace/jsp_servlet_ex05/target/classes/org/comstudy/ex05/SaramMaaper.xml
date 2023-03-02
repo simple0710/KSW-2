@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.comstudy.ex05.SaramMapper">
+  <select id="findOne" resultType="org.comstudy.myweb.saram.model.SaramDTO">
+    select * from SARAM where SEQ = #{seq}
+  </select>
+  <select id="findAll" resultType="org.comstudy.myweb.saram.model.SaramDTO">
+     SELECT * FROM SARAM
+  </select>
+  
+  <insert id="save" parameterType="org.comstudy.myweb.saram.model.SaramDTO"> 
+     insert into saram(id, name, age) values(#{id},#{name},#{age})
+  </insert>
+  
+  <update id="update" parameterType="org.comstudy.myweb.saram.model.SaramDTO">
+     update saram set id=#{id}, name=#{name},  age=#{age} WHERE seq=#{seq}
+  </update>
+  
+  <delete id="delete" parameterType="org.comstudy.myweb.saram.model.SaramDTO">
+     DELETE from saram WHERE seq=#{seq}
+  </delete>
+</mapper>

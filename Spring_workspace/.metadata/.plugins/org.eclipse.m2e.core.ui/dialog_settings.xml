@@ -6,12 +6,15 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="org.comstudy"/>
 			<item value="spring_day01_dy"/>
 		</list>
 		<list key="name">
+			<item value="ex06"/>
 			<item value="pom"/>
 		</list>
 		<list key="artifactId">
+			<item value="org.comstudy.ex06"/>
 			<item value="spring_day01_dy"/>
 		</list>
 		<list key="version">
