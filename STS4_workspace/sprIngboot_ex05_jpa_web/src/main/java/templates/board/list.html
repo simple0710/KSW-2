@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>자유 기시판</h1>
+<table th:border="1">
+<tr>
+<th th:text="seq" th:width="50"></th>
+<th th:text="title" th:width="200"></th>
+<th th:text="writer" th:width="80"></th>
+</tr>
+<tr th:each="board : ${list}">
+<td th:text="${board.seq}"></td>
+<td th:text="${board.title}"></td>
+<td th:text="${board.writer}"></td>
+</tr>
+</table>
+<hr/>
+<p><a th:href="@{/board/input}">글쓰기</a></p>
+</body>
+</html>

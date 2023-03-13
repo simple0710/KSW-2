@@ -1,0 +1,4 @@
+# 애플리케이션에서만 구동하기 위해 Web 실행 막아두기
+spring:
+  main:
+    web-application-type: none

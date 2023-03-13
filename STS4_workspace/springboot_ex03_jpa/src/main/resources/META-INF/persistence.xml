@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+	<persistence-unit name="SaramJPA">
+		<class>org.comstudy.saramjpa.domain.SaramEntity.java</class>
+		<properties>
+			<!-- 필수 속성 - Database Source 설정 -->
+			<property name="javax.persistence.jdbc.driver"
+				value="org.h2.Driver" /> <!-- JDBC 드라이버 -->
+			<property name="javax.persistence.jdbc.user" value="sa" /> <!-- DB 접속 ID -->
+			<property name="javax.persistence.jdbc.password" value="" /> <!-- DB 접속 PW -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:h2:tcp://localhost/~/test" /> <!-- DB 접속 URL -->
+
+			<!-- DB Dialect 설정 -->
+			<!-- DB 변경 시 DB 방언(Dialect)만 교체 -->
+			<!-- 오라클 10g : org.hibernate.dialect.oracle10gdialect 
+				 MySQL : org.hibernate.dialect.mysql5innodbdialect 
+				 SQL Server : org.hibernate.dialect.sqlserver2012dialect -->
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.H2Dialect" />
+
+			<!-- 옵션 JPA 구현체(Hibernate) 설정 -->
+			<property name="hibernate.show_sql" value="true" /> <!-- hibernate가 실행한 SQL을 출력 -->
+			<property name="hibernate.format_sql" value="true" /> <!-- hibernate가 실행한 SQL 출력 시 정렬 -->
+			<property name="hibernate.use_sql_comments" value="true" /> <!-- 쿼리 출력 시 주석도 함께 출력 -->
+			<property name="hibernate.id.new_generator_mappings"
+				value="true" /> <!-- JPA 표준에 맞춘 새로운 키 생성 전략 사용 -->
+
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+	</persistence-unit>
+
+</persistence>
